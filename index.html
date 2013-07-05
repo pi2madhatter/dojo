@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="JQuery tutorial, sample page, intermediate 1, intermediate 2" />
+	<meta name="description" content="JQuery Intermediate Assignments" />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/tipped/tipped.js"></script>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+	<link rel="stylesheet" type="text/css" href="css/tipped.css"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<title>Victor's Intermediate JQuery site</title>
+	<script>
+	$(document).ready(function(){
+		$('#reset').css('display', 'none');
+		$('#results_wrapper').css('display', 'none');
+		$('#assignment_a img').click(function(){
+			$(this).fadeOut(1000);
+			$('#assignment_a .note_right').fadeOut(1000);
+			$('#reset').fadeIn(1000);
+		});
+		$('#reset').click(function(){
+			$('#assignment_a img').slideDown(1000);
+			$('#assignment_a .note_right').fadeIn(1000)
+			$(this).fadeOut(1000);
+		});
+		$('input').focus(function(){
+			$(this).addClass('fieldactive');
+			$(this).prev('label').addClass('labelactive');
+		});
+		$('input').blur(function(){
+			$(this).removeClass('fieldactive');
+			$('label').siblings().removeClass('labelactive');
+		});
+		$('form').submit(function(){
+			$('#results_wrapper').slideDown(100);
+
+			var startdate = $('#start_d').val();
+			var enddate = $('#end_d').val();
+			if(startdate === '') {
+				$('#start_date').html("Please choose a start date.").css('color', 'red').hide().fadeIn(1000);
+			} else {
+				$('#start_date').html("Start date is " + startdate + ".").css('color', '#000').hide().fadeIn(1000);
+			};
+			if(enddate === '') {
+				$('#end_date').html("Please choose an end date.").css('color', 'red').hide().delay(1000).fadeIn(1000);
+			} else {
+				$('#end_date').html("End date is " + enddate + ".").css('color', '#000').hide().delay(1000).fadeIn(1000);
+			};
+			$('#assignment_b .note_right').fadeOut(1000);
+			return false;
+		});
+		Tipped.create("form input,form select", { skin: 'green', hook: 'leftmiddle' });
+		$('#wrapper').accordion({ heightStyle: "content" });
+		$('.datepicker').datepicker();
+		$(function() {
+		    $( "#sortable" ).sortable();
+		    $( "#sortable" ).disableSelection();
+	    });
+	    //switcher
+	    $('#swappable img').click(function(){
+	    	var img_num = 'images/kitten' + $(this).attr('alt') + '.png';
+	    	console.log(img_num);
+	    	$(this).attr('src', img_num);
+	    });
+	});
+	</script>
+</head>
+<body>
+	<div id="main">
+		<h1> JQuery - Intermediate Assignments I &amp; II</h1>
+		<div id="wrapper">
+			<h2>Intermediate I - Assignment A</h2>
+			<div class="row" id="assignment_a">
+				<div class="note_placeholder">
+					<p class="note_right">Click on an image to delete it.</p>
+				</div>
+				<img src="images/image3.jpg" alt="barn" />
+				<img src="images/image3.jpg" alt="barn" />
+				<img src="images/image3.jpg" alt="barn" />
+				<img src="images/image3.jpg" alt="barn" />
+				<img src="images/image3.jpg" alt="barn" />
+				<img src="images/image3.jpg" alt="barn" />
+				<img src="images/image3.jpg" alt="barn" />
+				<img src="images/image3.jpg" alt="barn" />
+				<p id="reset" class="center">Restore Pictures</p>
+			</div>
+			<h2>Intermediate I - Assignment B</h2>
+			<div class="row" id="assignment_b">
+				<div class="note_placeholder">
+					<p class="note_right">Choose a starting and ending date.</p>
+				</div>
+				<h3>Date Form Entry</h3>
+				<div class="column">
+					<form> <!--"action" and "method" are deliberately removed for this exercise-->
+						<div class="fieldgroup1">
+							<label for="start_d">Start Date</label>
+							<input type="text" name="start_d" id="start_d" class="datepicker" title="Choose a start date." /><br />
+							<label for="end_d">Ending Date</label>
+							<input type="text" name="end_d" id="end_d" class="datepicker" title="Choose an end date." />
+						</div>
+						<div class="fieldgroup2">
+							<input type="hidden" name="company" value="CodingDojo" />
+							<input type="submit" value="Submit" id="submit" title="Hit Submit to display your dates." />
+						</div>
+					</form>
+				</div>
+				<div class="column">
+					<div id="results_wrapper">
+						<p class="results"><strong>Dates Results</strong></p>
+						<p class="results" id="start_date"></p>
+						<p class="results" id="end_date"></p>
+					</div>
+				</div>
+			</div>
+			<h2>Intermediate II - Assignment A &amp; B</h2>
+			<div class="row" id="assignment_2">
+				<div class="column">
+					<div class="note_placeholder">
+						<p class="note_right">Drag the slices to solve the puzzle.</p>
+					</div>
+					<h3>Slice-Drag (Assn. A)</h3>
+					<ul id="sortable">
+						<li><img src="images/ninja1.png" alt="n1" /></li>
+						<li><img src="images/ninja2.png" alt="n2" /></li>
+						<li><img src="images/ninja3.png" alt="n3" /></li>
+						<li><img src="images/ninja4.png" alt="n4" /></li>
+						<li><img src="images/ninja5.png" alt="n5" /></li>
+					</ul>
+				</div>
+				<div class="column">
+					<div class="note_placeholder">
+						<p class="note_right">Click the slices to change the image.</p>
+					</div>
+					<h3>Picture Swap (Assn. B)</h3>
+					<ul id="swappable">
+						<li><img src="images/ninja1.png" alt="1" /></li>
+						<li><img src="images/ninja2.png" alt="2" /></li>
+						<li><img src="images/ninja3.png" alt="3" /></li>
+						<li><img src="images/ninja4.png" alt="4" /></li>
+						<li><img src="images/ninja5.png" alt="5" /></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</HTML>

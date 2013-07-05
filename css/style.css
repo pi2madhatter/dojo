@@ -1,0 +1,192 @@
+/* Global Reset Begin */
+* {
+    padding: 0px;
+    margin: 0px;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    line-height: 1.25;
+	font-family:Arial, Helvetica, sans-serif;
+}
+body {
+	background-color: #EFEFEF;
+	padding: 10px 20px;
+}
+a, :focus {
+	color:#000;
+	outline:none!important;
+}
+/* Global Reset End */
+
+h1,h2,h3 {
+	color:#000;
+	font-weight: bold;
+}
+h1 {
+	font-size: 20px;
+	margin-left: 20px;
+	text-transform: uppercase;
+}
+h2 {
+	font-size: 13px;
+	clear: both;
+}
+h3 {
+	font-size:14px;
+	text-transform: none;
+	margin: 0 10px 20px;
+}
+p, ol, ul, li {
+	font-size: 12px;
+	margin-bottom: 10px;
+}
+
+strong, .strong {
+	font-weight: bold;
+}
+#main {
+	width:960px;
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 10px;
+	box-shadow: 0 0 25px RGBa(0,0,0,.3);	
+}
+#wrapper {
+	overflow: hidden;
+	height: auto;
+	background-color: #FFF;
+}
+.center {
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
+}
+#assignment_b {
+	width: 881px;
+}
+#assignment_b form .fieldactive {
+	border: solid 1px green;
+	box-shadow: 5px 5px 10px RGBa(0,0,0,.3);
+	margin:5px 5px 15px;
+}
+#assignment_b form .labelactive {
+	font-weight: bold;
+	color: green;
+}
+.row {
+	float: left;
+	clear: both;
+	background-image: none;
+	height: auto;
+	overflow: hidden;
+}
+.column {
+	float: left;
+	overflow: hidden;
+	height: auto;
+	margin-left: 40px;
+	padding-right: 10px;
+}
+#assignment_a img  {
+	cursor:pointer;
+	width: 200px;
+	margin:5px;
+}
+#assignment_a img:hover,  #ui-datepicker-div {
+	border:solid 5px #FFF;
+	box-shadow: 5px 5px 10px RGBa(0,0,0,.3);
+	margin:0;
+}
+#assignment_2 .row li img {
+	cursor:pointer;
+}
+#assignment_2 li img:hover {
+	box-shadow: 5px 5px 10px RGBa(0,0,0,.3);
+	border:solid 1px #FFF;
+	margin:0;
+}
+#assignment_2 li {
+	margin-bottom: 0px;
+	line-height: .7;
+	margin-right:2px;
+	margin-left:1px;
+}
+#assignment_2 li:hover {
+	margin:0;
+	margin-left:0;
+}
+#reset {
+	text-decoration: none;
+	color: #B5E4B7;
+	font-weight: bold;
+	background: #45BB4B;
+	background: -moz-linear-gradient(top,  #45BB4B 0%,#006600 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#45BB4B), color-stop(100%,#006600));
+	background: -webkit-linear-gradient(top, #45BB4B 0%,#006600 100%);
+	background: -o-linear-gradient(top,  #45BB4B 0%,#006600 100%);
+	background: -ms-linear-gradient(top,  #45BB4B 0%,#006600 100%);
+	background: linear-gradient(to top,  #45BB4B 0%,#006600 100%);
+	text-shadow: -1px -1px 1px RGBa(0,0,0,.3);
+	border: solid 1px #006600;
+	border-radius:5px;
+	overflow: hidden;
+	padding: 8px 16px 6px;
+	margin: 20px auto;
+	display: block;
+	width: 100px;
+}
+#reset:hover {
+	color: #FFF;
+	cursor: pointer;
+	text-shadow: 1px 1px 2px RGBa(0,0,0,.5);
+	box-shadow: 5px 5px 10px RGBa(0,0,0,.3);
+
+	background: #006600;
+	background: -moz-linear-gradient(top,  #006600 0%,#45BB4B 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#006600), color-stop(100%,#45BB4B));
+	background: -webkit-linear-gradient(top, #006600 0%,#45BB4B 100%);
+	background: -o-linear-gradient(top,  #006600 0%,#45BB4B 100%);
+	background: -ms-linear-gradient(top,  #006600 0%,#45BB4B 100%);
+	background: linear-gradient(to top,  #006600 0%,#45BB4B 100%);
+
+}
+.note_placeholder {
+	height: 20px;
+	margin-right: 10px;
+	width: 96%;
+}
+.note_right {
+	font-size: 10px;
+	color: #666;
+	text-align: right;
+	margin-right: 10px;
+}
+
+label, .radio_label {
+	font-size: 11px;
+}
+input {
+	margin-bottom: 10px;
+}
+#results_wrapper {
+	height:	110px;
+	background: #efefef;
+	background: -moz-linear-gradient(top,  #efefef 0%,#FFF 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#efefef), color-stop(100%,#FBD15C));
+	background: -webkit-linear-gradient(top, #efefef 0%,#FFF 100%);
+	background: -o-linear-gradient(top,  #efefef 0%,#FFF 100%);
+	background: -ms-linear-gradient(top,  #efefef 0%,#FFF 100%);
+	background: linear-gradient(to top,  #efefef 0%,#FFF 100%);
+	border: solid 1px #999;
+	padding: 10px;
+	margin: auto auto 20px 40px;
+}
+.results {
+	font-size: 20px;
+}
+.results strong {
+	font-size: 26px;
+	text-decoration: underline;
+	color: green;
+}
