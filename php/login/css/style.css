@@ -1,0 +1,61 @@
+/* Global Reset Begin */
+* {
+    padding: 0px;
+    margin: 0px;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    line-height: 1.25;
+	font-family:Arial, Helvetica, sans-serif;
+}
+body {
+	background-color: #EFEFEF;
+	padding: 10px 20px;
+	font-size: 12px;
+
+}
+
+/* Global Reset End */
+
+h2 {
+	font-size:18px;
+	color:#333;
+	font-weight: bold;
+}
+p, ol, ul, li {
+	font-size: 13px;
+	margin: 10px 0;
+}
+
+.loginbox {
+	width: 350px;
+	overflow: hidden;
+	margin:20px auto;
+	padding:40px 30px;
+	background-color: #FFF;
+	box-shadow: 0 0 25px RGBa(0,0,0,.4);
+}
+#message {
+	padding: 20px;
+	border: solid 1px red;
+	color:red;
+	margin: 10px 0;
+	background-color: #FFF;
+}
+#message.success {
+	color: green;
+	border-color: green;
+}
+.fieldactive {
+	border:solid 1px red;
+	box-shadow: 2px 2px 5px rgba(0,0,0,.3);
+}
+.note {
+	color: #666;
+	font-size: 11px;
+	text-align: right;
+}
+
+.asterisk {
+	color: red;
+}

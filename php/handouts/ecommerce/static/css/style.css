@@ -1,0 +1,25 @@
+#wrapper{
+	width: 760px;
+	margin:0px auto;
+}
+#search_bar{
+	margin-bottom:0px;
+}
+#products{
+	border: 1px solid #ccc;
+	border-top:none;
+	padding-top:30px;
+	padding-bottom:40px;
+}
+.product_logo{
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+.media{
+	background:white;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	padding:10px;
+}

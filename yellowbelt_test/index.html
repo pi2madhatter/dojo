@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="Dominion, power, utilities, electricity" />
+		<meta name="description" content="Dominion Power for Corporate and Residential" />
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+		<script type="text/javascript" src="js/tipped/tipped.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap-carousel.js"></script>
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/tipped.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
+		<title>Dominion Power and Utilities</title>
+		<script>
+			$(document).ready(function(){
+
+				$('.carousel').carousel();
+			});
+		</script>
+	</head>
+	<body>
+		<!--to center the content-->
+		<div class="shade" id="wrapper">
+			<header>
+				<!--logo corporate pulldown, search window-->
+				<img id="logo" src="images/dominion_logo.png" alt="Dominion" />
+				<nav>
+					navigation here
+				</nav>
+			</header>
+			<article>
+				<div id="col_left">
+					<div class="shade" id="login">
+						<div class="h2_label">
+							<h2 class="shadetext">Manage Your Account</h2>
+							<p class="shadetext">View/pay ebills, analyze usage and more.</p>
+						</div>
+						<form> <!--"action" and "method" are deliberately removed for this exercise-->
+							<label for="un">User Name:</label>
+							<input type="text" name="un" id="un" title="Enter your user name" />
+							<a href="fakeurl.html">Forgot your user name?</a>
+							<label for="password">Password:</label>
+							<input type="password" name="password" id="pw" title="Enter your password" /><img src="images/lock.png" />
+							<input type="submit" value="Sign In" title="Hit Register to submit your information." />
+							<a href="fakeurl.html">Register</a><img src="images/i.png" />
+						</form>
+
+					</div>
+					<div class="shade" id="new_cust">
+						<a class="shadetext" href="fakeurl.html">I am a New Customer</a>
+					</div>
+				</div>
+				<div class="shade" id="slideshow">
+					<!--carousel js behavior-->
+					<div id="myCarousel" class="carousel slide">
+					  <ol class="carousel-indicators">
+					    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					    <li data-target="#myCarousel" data-slide-to="1"></li>
+					    <li data-target="#myCarousel" data-slide-to="2"></li>
+					    <li data-target="#myCarousel" data-slide-to="3"></li>
+					  </ol>
+					  <!-- Carousel items -->
+					  <div class="carousel-inner">
+					    <div class="active item"><img src="images/james-river-expedition-ldc.jpg"></div>
+					    <div class="item"><img src="images/simplify-your-life-with-ebill-ldc-feature.jpg"></div>
+					    <div class="item"><img src="images/sit-back-and-enjoy-the-savings.jpg"></div>
+					    <div class="item"><img src="images/we-are-prepared-for-any-storm-are-you-1-ldc.jpg"></div>
+					  </div>
+					  <!-- Carousel nav -->
+					  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+					  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+					</div>
+				</div>
+			</article>
+			<aside class="shade" id="news">
+				<!--news ticker-->
+				News Update: <a href="fakeurl.html">Dominion to Build Solar Project in Georgia</a>
+			</aside>
+			<div id="subbanners">
+				<!--x3-->
+				<div class="banner" class="shade" id="datacenter">
+				<img src="images/dom_img.png" alt="Data Centers" />
+					<h3>Dominion Data Center Services</h3>
+					<p><a href="fakeurl.html">Data centers are a growing segment of our Virginia customer base</a></p>
+				</div>
+				<div class="banner" class="shade" id="datacenter">
+				<img src="images/dom_img.png" alt="Data Centers" />
+					<h3>Dominion Data Center Services</h3>
+					<p><a href="fakeurl.html">Data centers are a growing segment of our Virginia customer base</a></p>
+				</div>
+				<div class="banner" class="shade" id="datacenter">
+				<img src="images/dom_img.png" alt="Data Centers" />
+					<h3>Dominion Data Center Services</h3>
+					<p><a href="fakeurl.html">Data centers are a growing segment of our Virginia customer base</a></p>
+				</div>
+			</div>
+			<footer>
+				<nav>
+				</nav>
+				<aside id="stockticker">
+				</aside>
+			</footer>
+		</div>
+	</body>
+</html>
